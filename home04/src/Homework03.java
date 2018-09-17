@@ -17,7 +17,8 @@ public class Homework03 {
             symbols[i] = one;
         }
         for (int i = 0; i < symbols.length; i++) {
-            System.out.print(symbols[i]);
+            String strResult = (""+symbols[i]);
+            System.out.print(strResult);
         }
     }
 }
