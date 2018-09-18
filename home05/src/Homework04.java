@@ -18,7 +18,7 @@ public class Homework04 {
                 break;
             case "l":
             case "L":
-                System.out.println("Lower case: ");
+                System.out.print("Lower case: ");
                 for (int i = 0; i < symbols.length; i++) {
                     System.out.print(Character.toLowerCase(symbols[i]));
                 }
