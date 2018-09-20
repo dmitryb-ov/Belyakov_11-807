@@ -4,7 +4,7 @@ public class Homework02 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Write string");
-        String str = sc.next();
+        String str = sc.nextLine();
         char[] symblos = str.toCharArray();
         for (int i = 0; i < symblos.length; i++) {
             if((symblos[i] >= 48 && symblos[i] <= 57)){
