@@ -13,12 +13,13 @@ public class Homework01 {
         }
     }
 
-    static int task_recursion_D(int x) {
+    static int task_recursion_D(double x) {
         if (x == 1) {
             return 1;
-        } else if(x % 2 == 0){
+        } else if(x > 1 & x < 2){
+            return 0;
+        } else {
             return task_recursion_D(x / 2);
         }
-        return 0;
     }
 }
