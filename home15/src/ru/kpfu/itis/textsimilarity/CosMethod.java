@@ -25,11 +25,19 @@ public class CosMethod implements TextAnalyzer {
     private double[] TF(List<String> pList, List<String> list3) {
         double[] arrcount = new double[list3.size()];
         double count = 0;
+        for (int i = 0; i < pList.size() ; i++) {
+            if (list3.contains(pList.get(i))){
+                arrcount[list3.indexOf(pList.get(i))]++;
+
+            }
+        }
+        /*
         for (String word : pList) {
             if (list3.contains(word)) {
                 arrcount[list3.indexOf(word)]++;
             }
         }
+        */
         for (double i : arrcount) {
             count += i * i;
         }

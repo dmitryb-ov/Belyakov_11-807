@@ -1,4 +1,4 @@
-package ru.kpfu.itis.textsimilarity;
+/*package ru.kpfu.itis.textsimilarity;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -18,4 +18,4 @@ public class FileReader {
         System.out.println("Жакард через файл "+coef);
         System.out.println("Косинус через файл "+cosCoef);
     }
-}
+}*/
