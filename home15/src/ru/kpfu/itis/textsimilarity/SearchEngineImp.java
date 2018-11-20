@@ -1,5 +1,6 @@
 package ru.kpfu.itis.textsimilarity;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -13,10 +14,10 @@ public class SearchEngineImp implements SearchEngine {
         System.out.println("Jacard(1) or Cosine(2)?");
         int params = sc.nextInt();
         //List<Double> coef1 = new ArrayList<>(); //TextProvider
-        //List<TextProvider> name = new ArrayList<>();
+        List<TextProvider> name = new ArrayList<>();
         switch (params) {
             case 1:
-                sort(sources, params, target);
+                return sort(sources, params, target);
                 /*for (int i = 0; i < sources.size(); i++) {
                     for (int j = sources.size() - 1; j > i; j--) {
                         double coefJac1 = analyzer.analyze(target, (TextProvider) sources.get(j - 1));
@@ -32,9 +33,8 @@ public class SearchEngineImp implements SearchEngine {
                 }
                 Collections.sort(coef1);*/
                 //sort(sources.size(), target, coef1);
-                break;
             case 2:
-                sort(sources, params, target);
+                 return sort(sources, params, target);
                 /*for (int i = 0; i < sources.size(); i++) {
                     for (int j = sources.size() - 1; j > i; j--) {
                         double coefCos1 = cosAnalyzer.analyze(target, sources.get(j - 1));
@@ -50,20 +50,10 @@ public class SearchEngineImp implements SearchEngine {
                 }
                 Collections.sort(coef1);*/
                 //sort(name);
-                break;
         }
-        return sources;
+        return null;
     }
 
-    /*private List<TextProvider> sort (List<TextProvider> sources,TextProvider target, List<Double> coef1){
-        List<Double> coef2 = new ArrayList<>();
-        for (int i = 0; i < sources.size(); i++) {
-            for (int j = 0; j < sources.size(); j++) {
-
-            }
-        }
-        return ;
-    }*/
     private List<TextProvider> sort(List<TextProvider> sources, int params, TextProvider target) {
         double coef1 = 0.0;
         double coef2 = 0.0;
