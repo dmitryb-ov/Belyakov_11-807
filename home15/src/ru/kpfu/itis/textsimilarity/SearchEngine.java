@@ -5,5 +5,5 @@ package ru.kpfu.itis.textsimilarity;
 import java.util.List;
 
 public interface SearchEngine {
-    List<Double> getSortedByRelevanceList(TextProvider target, List<TextProvider> sources);
+    List<TextProvider> getSortedByRelevanceList(TextProvider target, List<TextProvider> sources);
 }

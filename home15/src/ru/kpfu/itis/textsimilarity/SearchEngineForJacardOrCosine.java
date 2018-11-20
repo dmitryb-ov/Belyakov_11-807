@@ -19,8 +19,8 @@ public class SearchEngineForJacardOrCosine {
         providers.add(test2);
         providers.add(test3);
         providers.add(test4);
-        List<Double> results = se.getSortedByRelevanceList(query,providers); //TextProvider
-        for (Double TP : results){ //TextProvider
+        List<TextProvider> results = se.getSortedByRelevanceList(query,providers); //TextProvider
+        for (TextProvider TP : results){ //TextProvider
             System.out.println(TP);
         }
     }
