@@ -1,5 +1,7 @@
 package ru.kpfu.itis.textsimilarity;
 
+import java.io.File;
+
 public class SimpleTextProvider implements TextProvider {
     private String text;
     private final static int MAX_SYMBOLS_NUM = 100;
@@ -23,7 +25,7 @@ public class SimpleTextProvider implements TextProvider {
         } else {
             strToReturn = text.substring(0, MAX_SYMBOLS_NUM - 1);
         }
-        return "{" +
+        return "SimpleTextProvider{" +
                 "text=' " + strToReturn + '\'' +
                 '}';
     }
