@@ -26,17 +26,20 @@ public class Main {
                 stack.push(c);
                 count++;
             }
-            if(c == ')' && stack.pop() == '(' ){
+            if(c == ')' && stack.peek(c) == '(' ){
                 plusCount++;
+                stack.pop();
             }
-            if (c == '}' && stack.pop() == '{'){
+            if (c == '}' && stack.peek(c) == '{'){
                 plusCount++;
+                stack.pop();
             }
-            if(c == ']' && stack.pop() == '['){
+            if(c == ']' && stack.peek(c) == '['){
                 plusCount++;
+                stack.pop();
             }
         }
-        if(plusCount == count){
+        if(stack.isEmpty()){
             return true;
         }
         return false;

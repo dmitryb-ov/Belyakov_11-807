@@ -13,6 +13,15 @@ public class Stack {
         arr[n++] = c;
     }
 
+    public char peek(char c){
+        int num = 0;
+        num = n-1;
+        if (n == 0) {
+            throw new IllegalStateException("Stack is empty");
+        }
+        return arr[num];
+    }
+
     public char pop() {
         if (n == 0) {
             throw new IllegalStateException("Stack is empty");
